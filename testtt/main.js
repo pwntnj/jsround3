@@ -59,17 +59,20 @@ inputClick.addEventListener('click', () =>{
 console.log(pNumber); // This will log the initial value, not the updated value
 
 const inputmes = document.getElementById('message')
-
-inputmes.addEventListener('keyup' , (event) => {
-    if (event.code === 'Enter') {
-        console.log(event.target.value);
-        display.textContent = inputmes.value
-    } else {
-        console.log('praewanarak');
-    }
+const submitButton = document.getElementById('submit')
+const display = document.querySelector('p')
+// inputmes.addEventListener('keyup' , (event) => {
+//     if (event.code === 'Enter') {
+//         console.log(event.target.value);
+//         display.textContent = inputmes.value
+//     } else {
+//         console.log('praewanarak');
+//     }
+// }  )
+submitButton.addEventListener('click' , () => {
+    display.textContent = inputmes.value
 }  )
 
-const display = document.querySelector('p')
 // inputmes.addEventListener('keyup', () => {
 //     display.textContent = inputmes.value
 // })
